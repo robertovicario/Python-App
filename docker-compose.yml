@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app-webapp:
+    image: app-webapp:1.0.0
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app:/app
