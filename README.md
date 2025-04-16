@@ -18,6 +18,10 @@ bash cmd.sh build
 
 Once the build process is complete, the project will be accessible at `localhost:8000`.
 
+> [!WARNING]
+>
+> If this port is already in use, search for all occurrences of `8000` within the project and replace them with your preferred port number. After making these changes, you'll need to rebuild the project for the modifications to take effect.
+
 ### `start`
 
 The program will run in debug mode, meaning frontend changes will be rendered upon reload. However, if you make changes to the backend, you will need to restart the program by running:
@@ -28,14 +32,14 @@ bash cmd.sh start
 
 ### `stop`
 
-Mainly, to stop the program, you can either:
-
-- Use `ctrl + C` to force stop.
-- Use bash to stop the program by running:
+To stop the program, simply run:
 
 ```sh
 bash cmd.sh stop
 ```
+
+> [!TIP]  
+> For a quicker way to stop, use `Ctrl + C` to force stop the program.
 
 ### `clear`
 
