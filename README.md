@@ -1,4 +1,4 @@
-# FlaskApp-tmp
+# FlaskApp
 
 ## Instructions
 
