@@ -1,29 +1,70 @@
 #!/bin/bash
 
-function start() {
-    docker-compose up # -d
+start() {
+    if [ "$2" == "-d" ]; then
+        printer "🚀 Starting the app"
+        docker-compose up -d
+        handler
+    else
+        printer "🚀 Starting the app"
+        docker-compose up
+        handler
+    fi
 }
 
-function stop() {
+stop() {
+    printer "🛑 Stopping the app"
     docker-compose down
+    handler
 }
 
-function build() {
-    docker-compose up --build # -d
+build() {
+    if [ "$2" == "-d" ]; then
+        printer "🔨 Building the app"
+        docker-compose up --build -d
+        handler
+    else
+        printer "🔨 Building the app"
+        docker-compose up --build
+        handler
+    fi
 }
 
-function clear() {
+clear() {
+    printer "🧹 Clearing all"
     docker-compose down --volumes --rmi all
+    handler
 }
 
-if [ "$1" == "start" ]; then
-    start
-elif [ "$1" == "stop" ]; then
-    stop
-elif [ "$1" == "build" ]; then
-    build
-elif [ "$1" == "clear" ]; then
-    clear
-else
-    echo "Usage: $0 {start|stop|build|clear}"
-fi
+printer() {
+    echo ""
+    echo $1
+    echo ""
+}
+
+handler() {
+    if [ $? -eq 0 ]; then
+        printer "✅ Process completed successfully."
+    else
+        printer "❌ An error occurred during the process."
+        exit 1
+    fi
+}
+
+case "$1" in
+    start)
+        start "$@"
+        ;;
+    stop)
+        stop
+        ;;
+    build)
+        build "$@"
+        ;;
+    clear)
+        clear
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|build|clear}"
+        ;;
+esac
