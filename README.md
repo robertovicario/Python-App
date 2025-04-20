@@ -16,6 +16,12 @@ If you haven't built the project yet, you can do so by running:
 bash cmd.sh build
 ```
 
+To run in detached mode, use:
+
+```sh
+bash cmd.sh build -d
+```
+
 Once the build process is complete, the project will be accessible at `localhost:8000`.
 
 > [!WARNING]
@@ -28,6 +34,12 @@ The program will run in debug mode, meaning frontend changes will be rendered up
 
 ```sh
 bash cmd.sh start
+```
+
+To run in detached mode, use:
+
+```sh
+bash cmd.sh build -d
 ```
 
 ### `stop`
