@@ -39,7 +39,7 @@ bash cmd.sh stop
 ```
 
 > [!TIP]  
-> For a quicker way to stop, use `Ctrl + C` to force stop the program.
+> For a quicker way to stop, use `ctrl + C` to force stop the program.
 
 ### `clear`
 
