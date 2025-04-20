@@ -4,12 +4,14 @@
 
 This project is a simple Flask application that serves as a template for building web applications. It includes a basic structure with Docker support for easy deployment and development.
 
-### Prerequisites
+## Prerequisites
 
-- Docker
-- Docker Compose
+> [!IMPORTANT]
+>
+> - Docker
+> - Docker Compose
 
-### User Interface (UI)
+## User Interface (UI)
 
 | <img src="./docs/img/1.png" alt="UI" width="384"> |
 | :-: |
