@@ -4,11 +4,15 @@
 <!-- Jinja :: Theme -->
 {% set theme_title = 'Home - FlaskApp' %}
 
+<!-- Jinja :: Styles -->
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+{% endblock %}
+
 <!-- Jinja :: Content -->
 {% block content %}
 <div class="d-flex flex-column justify-content-center align-items-center">
-    <i class="bi bi-code-slash display-1 mb-5"></i>
-    <h1 class="display-1 mb-3 text-primary">Hello, FlaskApp!</h1>
+    <h1 id="hello" class="display-1 mb-3 text-primary">Hello, World!</h1>
     <p class="display-6">Get your Flask app up and running in seconds.</p>
 </div>
 {% endblock %}

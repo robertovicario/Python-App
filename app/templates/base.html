@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 
     <!-- Root -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
@@ -52,6 +53,9 @@
 
     <!-- Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <!-- Components -->
+    <script src="{{ url_for('static', filename='js/components/copyright.js') }}"></script>
 
     <!-- Jinja :: Scripts -->
     {% block scripts %}{% endblock %}
