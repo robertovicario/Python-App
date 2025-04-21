@@ -56,7 +56,7 @@ bash cmd.sh start
 To run in detached mode, use:
 
 ```sh
-bash cmd.sh build -d
+bash cmd.sh start -d
 ```
 
 ### `stop`
