@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a simple Flask application that serves as a template for building web applications. It includes a basic structure with Docker support for easy deployment and development.
+This project is a simple [Flask](https://flask.palletsprojects.com) application that serves as a template for building web applications. It includes a basic structure with Docker support for easy deployment and development.
 
 ## Prerequisites
 
