@@ -1,7 +1,7 @@
 #!/bin/bash
 
 start() {
-    if [ "$2" == "-d" ]; then
+    if [ $2 == "-d" ]; then
         printer "🚀 Starting the app"
         docker-compose up -d
         handler
@@ -19,12 +19,12 @@ stop() {
 }
 
 build() {
-    if [ "$2" == "-d" ]; then
-        printer "🔨 Building the app"
+    if [ $2 == "-d" ]; then
+        printer "🔨 Setting up the app"
         docker-compose up --build -d
         handler
     else
-        printer "🔨 Building the app"
+        printer "🔨 Setting up the app"
         docker-compose up --build
         handler
     fi
@@ -38,28 +38,28 @@ clear() {
 
 printer() {
     echo ""
-    echo "$1"
+    echo $1
     echo ""
 }
 
 handler() {
     if [ $? -eq 0 ]; then
-        printer "✅ Process completed successfully."
+        printer "✅ Process completed successfully"
     else
-        printer "❌ An error occurred during the process."
+        printer "❌ An error occurred during the process"
         exit 1
     fi
 }
 
 case $1 in
     start)
-        start "$@"
+        start $@
         ;;
     stop)
         stop
         ;;
     build)
-        build "$@"
+        build $@
         ;;
     clear)
         clear
