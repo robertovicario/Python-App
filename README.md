@@ -22,7 +22,7 @@ This project is a simple [Flask](https://flask.palletsprojects.com) application 
 Usage:
 
 ```sh
-bash cmd.sh {start|stop|setup|clear|deploy}
+bash cmd.sh {start|stop|setup|clear|build|deploy}
 ```
 
 ### `setup`
