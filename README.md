@@ -13,7 +13,7 @@ This project is a simple [Flask](https://flask.palletsprojects.com) application 
 
 ## User Interface (UI)
 
-| <a href="https://www.robertovicario.com/FlaskApp" target="_blank"><img src="./docs/img/1.png" alt="UI" width="384"></a> |
+| <a href="https://www.robertovicario.com/FlaskApp"><img src="./docs/cover.png" alt="UI" width="384"></a> |
 | :-: |
 | **Home - FlaskApp** |
 
@@ -77,6 +77,16 @@ If you need to clear all containers and their orphaned dependencies, you can run
 ```sh
 bash cmd.sh clear
 ```
+
+### `deploy`
+
+To deploy the application to production, you can use the following command:
+
+```sh
+bash cmd.sh deploy
+```
+
+This project leverages GitHub Actions for CI/CD. The deployment workflow is configured to automatically build the project and deploy it to the GitHub Pages environment.
 
 ## License
 
