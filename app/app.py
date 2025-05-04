@@ -8,8 +8,7 @@ from routes.index import index_bp
 
 app = Flask(__name__)
 app.register_blueprint(index_bp)
-
-# -------------------------
+app.config['FREEZER_RELATIVE_URLS'] = True
 
 freezer = Freezer(app)
 
