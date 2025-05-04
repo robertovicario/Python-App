@@ -18,7 +18,7 @@ stop() {
     handler
 }
 
-build() {
+setup() {
     if [ $2 == "-d" ]; then
         printer "🔨 Setting up the app"
         docker-compose up --build -d
@@ -33,6 +33,14 @@ build() {
 clear() {
     printer "🧹 Clearing all"
     docker-compose down --volumes --rmi all
+    handler
+}
+
+build() {
+    printer "🔨 Building the app"
+    cd app
+    python app.py build
+    cd ..
     handler
 }
 
@@ -69,16 +77,19 @@ case $1 in
     stop)
         stop
         ;;
-    build)
-        build $@
+    setup)
+        setup $@
         ;;
     clear)
         clear
+        ;;
+    build)
+        build
         ;;
     deploy)
         deploy
         ;;
     *)
-        echo "Usage: $0 {start|stop|build|clear|deploy}"
+        echo "Usage: $0 {start|stop|setup|clear|build|deploy}"
         ;;
 esac

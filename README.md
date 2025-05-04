@@ -22,24 +22,24 @@ This project is a simple [Flask](https://flask.palletsprojects.com) application 
 Usage:
 
 ```sh
-bash cmd.sh {start|stop|build|clear|deploy}
+bash cmd.sh {start|stop|setup|clear|deploy}
 ```
 
-### `build`
+### `setup`
 
 If you haven't built the project yet, you can do so by running:
 
 ```sh
-bash cmd.sh build
+bash cmd.sh setup
 ```
 
 To run in detached mode, use:
 
 ```sh
-bash cmd.sh build -d
+bash cmd.sh setup -d
 ```
 
-Once the build process is complete, the project will be accessible at `localhost:8000`.
+Once the setup process is complete, the project will be accessible at `localhost:8000`.
 
 > [!WARNING]
 >
@@ -77,6 +77,16 @@ If you need to clear all containers and their orphaned dependencies, you can run
 ```sh
 bash cmd.sh clear
 ```
+
+### `build`
+
+To generate the static files for the project, run the following command:
+
+```sh
+bash cmd.sh build
+```
+
+After the build process completes, the static files will be available in the `./app/build` directory.
 
 ### `deploy`
 
