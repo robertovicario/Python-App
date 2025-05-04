@@ -13,7 +13,7 @@ This project is a simple [Flask](https://flask.palletsprojects.com) application 
 
 ## User Interface (UI)
 
-| <img src="./docs/img/1.png" alt="UI" width="384"> |
+| <a href="https://www.robertovicario.com/FlaskApp" target="_blank"><img src="./docs/img/1.png" alt="UI" width="384"></a> |
 | :-: |
 | **Home - FlaskApp** |
 
