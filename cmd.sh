@@ -36,6 +36,17 @@ clear() {
     handler
 }
 
+deploy() {
+    printer "🚀 Deploying the app"
+    cd app
+    python app.py build
+    cd ..
+    git add .
+    git commit -m "Deployed the app"
+    git push
+    handler
+}
+
 printer() {
     echo ""
     echo $1
@@ -64,7 +75,10 @@ case $1 in
     clear)
         clear
         ;;
+    deploy)
+        deploy
+        ;;
     *)
-        echo "Usage: $0 {start|stop|build|clear}"
+        echo "Usage: $0 {start|stop|build|clear|deploy}"
         ;;
 esac
