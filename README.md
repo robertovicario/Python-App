@@ -22,7 +22,7 @@ This project is a simple Flask application that serves as a template for buildin
 Usage:
 
 ```sh
-bash cmd.sh {start|stop|setup|clear|build|deploy}
+bash cmd.sh {start|stop|setup|clear}
 ```
 
 ### `setup`
@@ -65,26 +65,6 @@ If you need to clear all containers and their orphaned dependencies, you can run
 ```sh
 bash cmd.sh clear
 ```
-
-### `build`
-
-To generate the static files for the project, run the following command:
-
-```sh
-bash cmd.sh build
-```
-
-After the build process completes, the static files will be available in the `./app/build` directory.
-
-### `deploy`
-
-To deploy the application to production, you can use the following command:
-
-```sh
-bash cmd.sh deploy
-```
-
-This project leverages GitHub Actions for CI/CD. The deployment workflow is configured to automatically build the project and deploy it to the GitHub Pages environment.
 
 ## License
 
