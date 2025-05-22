@@ -1,15 +1,9 @@
 #!/bin/bash
 
 start() {
-    if [ $2 == "-d" ]; then
-        printer "🚀 Starting the app"
-        docker-compose up -d
-        handler
-    else
-        printer "🚀 Starting the app"
-        docker-compose up
-        handler
-    fi
+    printer "🚀 Starting the app"
+    docker-compose up
+    handler
 }
 
 stop() {
@@ -19,15 +13,9 @@ stop() {
 }
 
 setup() {
-    if [ $2 == "-d" ]; then
-        printer "🔨 Setting up the app"
-        docker-compose up --build -d
-        handler
-    else
-        printer "🔨 Setting up the app"
-        docker-compose up --build
-        handler
-    fi
+    printer "🔨 Setting up the app"
+    docker-compose up --build
+    handler
 }
 
 clear() {
@@ -38,20 +26,32 @@ clear() {
 
 build() {
     printer "🔨 Building the app"
-    cd app
-    python app.py build
-    cd ..
+    mkdir -p build
+    rm -rf build/*
+    cp -r app build/app
+    cp .gitignore build
+    cp Dockerfile build
+    cp app/README.md build
     handler
 }
 
 deploy() {
     printer "🚀 Deploying the app"
+
+    # -------------------------
+
     cd app
     python app.py build
     cd ..
+
+    # -------------------------
+    
     git add .
     git commit -m "Deployed the app"
     git push
+
+    # -------------------------
+    
     handler
 }
 
