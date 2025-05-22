@@ -24,37 +24,6 @@ clear() {
     handler
 }
 
-build() {
-    printer "🔨 Building the app"
-    mkdir -p build
-    rm -rf build/*
-    cp -r app build/app
-    cp .gitignore build
-    cp Dockerfile build
-    cp app/README.md build
-    handler
-}
-
-deploy() {
-    printer "🚀 Deploying the app"
-
-    # -------------------------
-
-    cd app
-    python app.py build
-    cd ..
-
-    # -------------------------
-    
-    git add .
-    git commit -m "Deployed the app"
-    git push
-
-    # -------------------------
-    
-    handler
-}
-
 printer() {
     echo ""
     echo $1
@@ -86,10 +55,7 @@ case $1 in
     build)
         build
         ;;
-    deploy)
-        deploy
-        ;;
     *)
-        echo "Usage: $0 {start|stop|setup|clear|build|deploy}"
+        echo "Usage: $0 {start|stop|setup|clear}"
         ;;
 esac
