@@ -2,7 +2,7 @@
     "system": {
         "name": "PythonApp",
         "port": 7860,
-        "version": "2.0.1",
+        "version": "2.0.2",
         "repository": {
             "server": "github.com",
             "user": "robertovicario",
