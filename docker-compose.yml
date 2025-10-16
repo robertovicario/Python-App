@@ -5,8 +5,8 @@ services:
         container_name: "app-webapp"
         image: "app-webapp:1.0.0"
         build:
-            context: "./app"
-            dockerfile: "Dockerfile"
+            context: "."
+            dockerfile: "dev/Dockerfile"
         ports:
             - "7860:7860"
         volumes:
