@@ -1,10 +1,10 @@
 <!-- Navbar -->
 <nav class="navbar w-100 px-5 py-3 bg-light">
     <a class="d-flex flex-row gap-3" href="#">
-        <img src="{{ url_for('static', filename='img/flaskapp-1.svg') }}" alt="Logo" width="32">
-        <h1 class="navbar-brand m-0">FlaskApp</h1>
+        <img src="{{ url_for('static', filename='img/pythonapp-1.svg') }}" alt="Logo" width="32">
+        <h1 class="navbar-brand m-0">{{ config.system.name }}</h1>
     </a>
-    <a class="d-flex align-items-center btn btn-primary" href="https://github.com/robertovicario/FlaskApp" target="_blank">
+    <a class="d-flex align-items-center btn btn-primary" href="{{ config.system.repository.url }}" target="_blank">
         <span class="me-2">GitHub</span>
         <i class="bi bi-github fs-5"></i>
     </a>

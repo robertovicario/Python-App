@@ -52,9 +52,6 @@ case $1 in
     clear)
         clear
         ;;
-    build)
-        build
-        ;;
     *)
         echo "Usage: $0 {start|stop|setup|clear}"
         ;;

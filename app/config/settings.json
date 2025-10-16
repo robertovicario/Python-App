@@ -1,0 +1,13 @@
+{
+    "system": {
+        "name": "PythonApp",
+        "port": 7860,
+        "version": "1.0.0",
+        "repository": {
+            "server": "github.com",
+            "user": "robertovicario",
+            "name": "PythonApp",
+            "url": "https://github.com/robertovicario/PythonApp"
+        }
+    }
+}

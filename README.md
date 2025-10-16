@@ -1,8 +1,8 @@
-# FlaskApp
+# PythonApp
 
 ## Overview
 
-This project is a simple Flask application that serves as a template for building web applications. It includes a basic structure with Docker support for easy deployment and development.
+This project is a simple Python application that serves as a template for building web applications. It includes a basic structure with Docker support for easy deployment and development.
 
 ## Prerequisites
 
@@ -13,9 +13,9 @@ This project is a simple Flask application that serves as a template for buildin
 
 ## User Interface (UI)
 
-| <a href="https://www.robertovicario.com/FlaskApp"><img src="./docs/cover.png" alt="UI" width="384"></a> |
+| <a href="https://www.robertovicario.com/PythonApp"><img src="docs/cover.png" alt="UI" width="512"></a> |
 | :-: |
-| **Home - FlaskApp** |
+| **Home - PythonApp** |
 
 ## Instructions
 
@@ -33,11 +33,11 @@ If you haven't built the project yet, you can do so by running:
 bash cmd.sh setup
 ```
 
-Once the setup process is complete, the project will be accessible at `localhost:8000`.
+Once the setup process is complete, the project will be accessible at `localhost:7860`.
 
 > [!WARNING]
 >
-> If this port is already in use, search for all occurrences of `8000` within the project and replace them with your preferred port number. After making these changes, you'll need to rebuild the project for the modifications to take effect.
+> If this port is already in use, search for all occurrences of `7860` within the project and replace them with your preferred port number. After making these changes, you'll need to rebuild the project for the modifications to take effect.
 
 ### `start`
 
