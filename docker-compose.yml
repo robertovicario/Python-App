@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-    app-webapp:
-        container_name: "app-webapp"
-        image: "app-webapp:1.0.0"
+    webapp-app:
+        container_name: "webapp-app"
+        image: "webapp-app:1.0.0"
         build:
             context: "."
             dockerfile: "dev/Dockerfile"
