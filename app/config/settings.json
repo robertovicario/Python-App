@@ -1,5 +1,6 @@
 {
     "system": {
+        "lang": "en",
         "name": "PythonApp",
         "port": 7860,
         "version": "2.0.2",
@@ -9,5 +10,8 @@
             "name": "PythonApp",
             "url": "https://github.com/robertovicario/PythonApp"
         }
+    },
+    "ui": {
+        "primary": "#BDBF09"
     }
 }
